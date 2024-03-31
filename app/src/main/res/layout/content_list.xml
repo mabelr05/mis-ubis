@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sombra_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="50dp"
+        app:cardElevation="5dp">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/icono_amarillo"
+            app:civ_border_color="#ffffff"
+            app:civ_border_width="2dp" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/sombra_img"
+        android:layout_centerVertical="true">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nombre"
+                android:textColor="#000000"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="?android:attr/listPreferredItemPaddingLeft"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:fontFamily="@font/quicksand_regular"
+                />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/textDireccion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Numero"
+            android:textColor="#808080"
+            android:layout_marginTop="-5dp"
+            android:layout_toEndOf="@+id/textList"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="?android:attr/listPreferredItemPaddingLeft"
+            android:fontFamily="@font/quicksand_light"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

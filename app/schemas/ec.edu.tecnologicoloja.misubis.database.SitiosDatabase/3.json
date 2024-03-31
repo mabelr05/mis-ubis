@@ -1,0 +1,82 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "88da4dfdb3f26f7805cb5d2b966245f4",
+    "entities": [
+      {
+        "tableName": "negocios",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_negocio` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `nombre_sitio` TEXT NOT NULL, `latitude` REAL, `longitude` REAL, `propietario` TEXT NOT NULL, `contacto` TEXT NOT NULL, `direccion` TEXT NOT NULL, `foto` TEXT, `email` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id_negocio",
+            "columnName": "id_negocio",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre_sitio",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitud",
+            "columnName": "latitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "longitud",
+            "columnName": "longitude",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "propietario",
+            "columnName": "propietario",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contacto",
+            "columnName": "contacto",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "direccion",
+            "columnName": "direccion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "foto",
+            "columnName": "foto",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id_negocio"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '88da4dfdb3f26f7805cb5d2b966245f4')"
+    ]
+  }
+}

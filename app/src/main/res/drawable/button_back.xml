@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Botón presionado -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#80CCCCCC" /> <!-- Cambia aquí el nivel de transparencia -->
+            <corners android:radius="500dp" />
+            <padding android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp" />
+        </shape>
+    </item>
+
+    <!-- Botón no presionado -->
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="#FFFFFF" /> <!-- Cambia aquí el nivel de transparencia -->
+                    <corners android:radius="500dp" />
+                    <padding android:bottom="8dp" android:left="8dp" android:right="8dp" android:top="8dp" />
+                </shape>
+            </item>
+            <item>
+                <vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="24dp" android:height="24dp" android:tint="#000000" android:viewportWidth="24" android:viewportHeight="24">
+                    <path android:fillColor="@android:color/white" android:pathData="M17.77,3.77l-1.77,-1.77l-10,10l10,10l1.77,-1.77l-8.23,-8.23z" />
+                </vector>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>
